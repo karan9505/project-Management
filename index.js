@@ -11,6 +11,9 @@ require('./databaseConnect.js')
 
 //Importing routers
 //1. Credential router
+application.get('/', (req, res) => {
+ res.send('Hello')
+})
 const credentialRoutes = require('./ROUTER/credentialRouter.js');
 application.use('/Credential', credentialRoutes)
 //2. Project router
