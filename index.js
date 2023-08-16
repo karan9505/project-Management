@@ -4,7 +4,7 @@ const application = express();
 application.use(express.json());
 const cors = require('cors');
 application.use(cors({
- origin: "https://my-project-management.onrender.com"
+ origin: "https://my-project-management.onrender.com/"
 }))
 //Database-connection
 require('./databaseConnect.js')
