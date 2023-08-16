@@ -4,7 +4,7 @@ const application = express();
 application.use(express.json());
 const cors = require('cors');
 application.use(cors({
- origin: "https://my-project-management.onrender.com/"
+ origin: "https://64dc84ba50bc8c43376bc755--animated-marigold-8e403a.netlify.app/"
 }))
 //Database-connection
 require('./databaseConnect.js')
