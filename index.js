@@ -11,7 +11,7 @@ const corsOptions = {
 }
 application.use(cors(corsOptions))
 
-application.use(bodyParser.json());
+// application.use(bodyParser.json());
 application.use(express.urlencoded({ extended: true }));
 application.set('trust proxy', 1);
 //Database-connection
