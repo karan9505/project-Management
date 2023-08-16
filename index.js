@@ -9,11 +9,11 @@ const corsOptions = {
  credentials: true,
  optionSuccessStatus: 200
 }
-app.use(cors(corsOptions))
+application.use(cors(corsOptions))
 
-app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: true }));
-app.set('trust proxy', 1);
+application.use(bodyParser.json());
+application.use(express.urlencoded({ extended: true }));
+application.set('trust proxy', 1);
 //Database-connection
 require('./databaseConnect.js')
 
