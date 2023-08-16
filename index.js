@@ -4,16 +4,13 @@ const application = express();
 application.use(express.json());
 const cors = require('cors');
 application.use(cors({
- origin: "http://localhost:3000"
+ origin: "https://my-project-management.onrender.com"
 }))
 //Database-connection
 require('./databaseConnect.js')
 
 //Importing routers
 //1. Credential router
-application.get('/', (req, res) => {
- res.send('Hello')
-})
 const credentialRoutes = require('./ROUTER/credentialRouter.js');
 application.use('/Credential', credentialRoutes)
 //2. Project router
