@@ -149,9 +149,14 @@ const searchProject = async (req, res) => {
     const searchedProjects = await project.find({
       userId: req.body.userId,
       "$or": [
-        {
-          "theme": { $regex: req.body.key, $options: 'i' }
-        }
+        { "theme": { $regex: req.body.key, $options: 'i' } },
+        { "reason": { $regex: req.body.key, $options: 'i' } },
+        { "type": { $regex: req.body.key, $options: 'i' } },
+        { "division": { $regex: req.body.key, $options: 'i' } },
+        { "category": { $regex: req.body.key, $options: 'i' } },
+        { "department": { $regex: req.body.key, $options: 'i' } },
+        { "location": { $regex: req.body.key, $options: 'i' } },
+        { "status": { $regex: req.body.key, $options: 'i' } }
       ]
     }).collation({ locale: "en", strength: 2 })
     res.send({
